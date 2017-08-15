@@ -44,9 +44,31 @@ An outlet in an iOS view is similar to the way controllers expose data to their 
 
 Question 2: "Swift uses [Automatic Reference Counting](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/AutomaticReferenceCounting.html#//apple_ref/doc/uid/TP40014097-CH20-ID49) (ARC), which is not a garbage collector, to manage memory. Can you explain how you can get a strong reference cycle for closures? (There's a section explaining this concept in the link, how would you summarize as simply as possible?)"
 
-**Answer:** [Enter your answer here in a paragraph or two].
+**Answer:**
+A strong reference cycle prevents proper memory deallocation over the application's lifecycle. In the case of a closure, imagine a class:
 
+```
+class ClassWithClosure {
+    let variable1: String
+    
+    var method1: () -> String = {
+        return "(self.variable1) is pretty cool"
+    }
+    
+    init(variable: String) {
+        self.variable1 = variable
+    }
+ }
+```
 
+The `method1` property on the class is given a closure that references the class level `variable1`. If we were to create an instance of `ClassWithClosure` as shown below, we would be creating a strong reference cycle between the instance and the closure value assigned to `variable 1. 
+
+```
+var instance: ClassWithClosure? = ClassWithClosure(variable1: "hello")
+print(instance.method1())
+```
+
+Setting `instance` to `nil` does not, unfortunately deallocate its reference due the the lingering reference to its closure variable. 
 
 
 ## License
