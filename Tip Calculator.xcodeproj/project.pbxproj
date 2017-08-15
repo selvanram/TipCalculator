@@ -14,6 +14,7 @@
 		F3D057811F37913500CBDA65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3D0577F1F37913500CBDA65 /* LaunchScreen.storyboard */; };
 		F3D0578C1F37913500CBDA65 /* Tip_CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D0578B1F37913500CBDA65 /* Tip_CalculatorTests.swift */; };
 		F3D057971F37913500CBDA65 /* Tip_CalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D057961F37913500CBDA65 /* Tip_CalculatorUITests.swift */; };
+		F3D057A51F37E40B00CBDA65 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D057A41F37E40B00CBDA65 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		F3D057921F37913500CBDA65 /* Tip CalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tip CalculatorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3D057961F37913500CBDA65 /* Tip_CalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tip_CalculatorUITests.swift; sourceTree = "<group>"; };
 		F3D057981F37913500CBDA65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3D057A41F37E40B00CBDA65 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		F3D0576A1F37913400CBDA65 = {
 			isa = PBXGroup;
 			children = (
+				F3D057A41F37E40B00CBDA65 /* SettingsViewController.swift */,
 				F3D057751F37913500CBDA65 /* Tip Calculator */,
 				F3D0578A1F37913500CBDA65 /* Tip CalculatorTests */,
 				F3D057951F37913500CBDA65 /* Tip CalculatorUITests */,
@@ -261,6 +264,7 @@
 			files = (
 				F3D057791F37913500CBDA65 /* ViewController.swift in Sources */,
 				F3D057771F37913500CBDA65 /* AppDelegate.swift in Sources */,
+				F3D057A51F37E40B00CBDA65 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
