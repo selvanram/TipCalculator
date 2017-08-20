@@ -56,11 +56,19 @@ class ViewController: UIViewController {
     
     func performTipCalculation() {
         let bill = Double(billField.text!) ?? 0
-        let tip = bill * TIPPERCENTAGES[tipControl.selectedSegmentIndex]
-        let total = bill + tip
+        let tipValue = bill * TIPPERCENTAGES[tipControl.selectedSegmentIndex]
+        let totalValue = bill + tipValue
         
-        tipLabel.text = String(format: "$%.2f", tip)
-        totalLabel.text = String(format: "$%.2f", total)
+        let total = totalValue as NSNumber
+        let tip = tipValue as NSNumber
+        
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.locale = NSLocale.current
+        
+        
+        tipLabel.text = formatter.string(from: tip)
+        totalLabel.text = formatter.string(from: total)
     }
 }
 
